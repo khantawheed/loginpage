@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type="text/css" media="screen" href="main.css">
+    <script>scr = "main.js"</script>
+    <title>signup</title>
+</head>
+<body>
+    <div class="col-lg-8">
+        {% csrf_token %}
+        <form class="form-contact contact_form" action="register" method="post">
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <input class="form-control valid" name="address" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your address'" placeholder="Enter your address">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <input class="form-control valid" name="username" id="name" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your username'" placeholder="Enter your username">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <input class="form-control valid" name="email" id="email" type="email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" placeholder="Email">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <input class="form-control valid" name="password1" id="password" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Create Password'" placeholder="Create Password">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        {% csrf_token %}
+                        <input class="form-control valid" name="password2" id="password" type="password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Confirm Password'" placeholder="Confirm Password">
+                    </div>
+                </div>
+                <input type="submit">
+            </div>
+        </form>
+    </div>>
+</body>
+</html>
